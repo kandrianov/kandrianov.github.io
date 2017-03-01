@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Amberton",
+    "description": "Amberton is located in the heart of Old Town, just a few steps from Cathedral Square. It offers air conditioned rooms with flat-screen cable TVs, work desks and a free internet connection.",
+    "image": "http://t-ec.bstatic.com/images/hotel/square200/893/89329448.jpg",
+    "price": 92
+  },
+  {
+    "id": 2,
+    "title": "Kempinski Hotel",
+    "description": "Kempinski Hotel Cathedral Square is in the Old Town, at the cathedral Square, in front of the Gediminas Tower. It offers elegant, air-conditioned rooms with free Wi-Fi and access to the spa center.",
+    "image": "http://s-ec.bstatic.com/images/hotel/square200/162/16289341.jpg",
+    "price": 220
+  },
+  {
+    "id": 3,
+    "title": "Pan Tadeusz",
+    "description": "The 3-star hotel Pan Tadeusz is located in Vilnius’s Naujamiestis District, 2 km from the Old Town. It offers air-conditioned rooms with free Wi-Fi and a minibar. Free parking is also provided.",
+    "image": "http://t-ec.bstatic.com/images/hotel/square200/134/13479054.jpg",
+    "price": 36
+  },
+  {
+    "id": 4,
+    "title": "Ramada Hotel",
+    "description": "Located directly on Vilnius’s Old Town, Ramada Hotel & Suites Vilnius offers air-conditioned rooms with flat-screen satellite TV and free WiFi. This 5 plus star hotel features a wellness centre with a steam bath and a hot tub and guests have free access from 7 am to 3 pm.",
+    "image": "http://s-ec.bstatic.com/images/hotel/square200/335/33537723.jpg",
+    "price": 136
+  }
+]

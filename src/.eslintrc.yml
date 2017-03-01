@@ -1,0 +1,46 @@
+parser: 'babel-eslint'
+parserOptions:
+  sourceType: 'module'
+
+settings:
+  import/resolver:
+    webpack:
+      config: 'tools/webpack.config.js'
+
+extends:
+  - airbnb
+  - plugin:import/errors
+  - plugin:import/warnings
+
+plugins:
+  - babel
+  - import
+  - react
+
+env:
+  browser: true
+  node: true
+  mocha: true
+
+rules:
+  global-require: 0
+  no-nested-ternary: 0
+  no-confusing-arrow: 0
+
+  import/prefer-default-export: 0
+  import/no-extraneous-dependencies:
+    - error
+    - devDependencies: true
+
+  arrow-parens: 0
+  object-shorthand: 1
+  generator-star-spacing: 1
+  array-bracket-spacing: 1
+
+  new-cap: 0
+  object-curly-spacing: 0
+  no-await-in-loop: 0
+
+  babel/new-cap: 1
+  babel/object-curly-spacing: 0
+  babel/no-await-in-loop: 0
