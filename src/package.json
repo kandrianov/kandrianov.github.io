@@ -1,10 +1,9 @@
 {
-  "name": "RRtree",
+  "name": "Examples",
   "version": "0.0.0",
-  "description": "Component for sortable nested sets",
+  "description": "Etherisk use cases",
   "main": "index.js",
   "author": "Константин Андрианов <andrianov.dev@yandex.by> (https://github.com/kandrianov)",
-  "private": true,
   "engines": {
     "node": ">=7.6.0"
   },
