@@ -1,18 +1,21 @@
 import React from 'react';
-import { Router, Route, IndexRedirect, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import Layout from '../components/layout';
 import Appartments from '../components/appartments';
 import Appartment from '../components/appartment';
 import Order from '../components/order';
+import Airline from '../components/airline';
+import AirlineOrder from '../components/airlineOrder';
 import './styles.sass';
 
 const Application = () => (
   <Router history={browserHistory}>
     <Route path="/" component={Layout}>
-      <IndexRedirect to="appartments" />
-      <Route path="appartments" component={Appartments} />
+      <IndexRoute component={Appartments} />
       <Route path="appartments/:appartmentId" component={Appartment} />
-      <Order path="order/:appartmentId" component={Order} />
+      <Route path="order/:appartmentId" component={Order} />
+      <Route path="airline" component={Airline} />
+      <Route path="airline/order" component={AirlineOrder} />
     </Route>
   </Router>
 );

@@ -5,7 +5,7 @@ import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker.css';
 
 
-const Flights = ({flights, onFlightSelect}) => {
+export const Flights = ({flights, onFlightSelect}) => {
   const list = flights.map(flight => (
     <div key={flight.id} onClick={onFlightSelect(flight)}>
       {flight.id}: {flight.origin} - {flight.destination}; dep: {flight.departureTime}; arr: {flight.arrivalTime}
@@ -15,7 +15,7 @@ const Flights = ({flights, onFlightSelect}) => {
   return (<div>{list}</div>);
 }
 
-const RatingTable = ({show, ratingTable, premium, setPremium, applyForPolicy}) => {
+export const RatingTable = ({show, ratingTable, premium, setPremium, applyForPolicy}) => {
   return (
     <div>
       {show && (
@@ -64,7 +64,8 @@ export default class EtheriskComponent extends Component {
     this.state = {
       from: '',
       to: '',
-      date: moment(),
+      date: '',
+      searching: false,
       flights: [],
       flight: '',
       showRatingTable: false,
@@ -135,11 +136,13 @@ export default class EtheriskComponent extends Component {
       }
       this.setState({
         [field]: value,
+      }, () => {
+        if (this.state.from !== '' && this.state.to !== '' && this.state.date !== '') {
+          this.setState({searching: true});
+          this.etherisk.searchFlights(this.state.from, this.state.to, moment(this.state.date).format('YYYY-MM-DD'))
+            .then(flights => this.setState({flights, searching: false}));
+        }
       });
-
-      if (this.state.from && this.state.to && this.state.date) {
-        this.searchFlights(this.state.from, this.state.to, this.state.date);
-      }
     };
   }
 
@@ -178,7 +181,7 @@ export default class EtheriskComponent extends Component {
 
 
         </form>
-
+        {this.state.searching && (<div>Searching...</div>)}
         <Flights
           flights={this.state.flights}
           onFlightSelect={this.onFlightSelect}

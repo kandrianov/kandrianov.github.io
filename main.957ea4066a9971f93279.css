@@ -409,6 +409,10 @@ body {
   padding: 0;
   font-family: 'Roboto'; }
 
+.b-header a {
+  display: inline-block;
+  margin: 10px 10px 0 0; }
+
 .b-layout {
   width: 960px;
   margin: 0 auto; }
@@ -469,4 +473,4 @@ table {
   table td {
     border: 1px solid #000; }
 
-/*# sourceMappingURL=main.84e20cf152e2aa3a9e7d.css.map*/
+/*# sourceMappingURL=main.957ea4066a9971f93279.css.map*/

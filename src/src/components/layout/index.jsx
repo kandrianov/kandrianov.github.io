@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from '../header';
 
-const Layout = ({children}) => (
+const Layout = ({children, location }) => (
   <div className="b-layout">
-    <Header />
+    <Header location={location} />
     <div>
       {children}
     </div>

@@ -170,7 +170,6 @@ export default class Etherisk {
   }
 
   applyForPolicy(premium, flight) {
-    window.x = flight;
     return new Promise((resolve, reject) => {
       this.premium = this.web3.toWei(Number(premium), 'ether');
       this.flight = flight;
@@ -431,7 +430,7 @@ export default class Etherisk {
     if (flights.length === 0) {
 
     } else {
-      flights.sort(function (a, b) {
+      flights.sort((a, b) => {
         if (a.id == '-') return 0;
         const dep_a = new Date(a.departureTime).valueOf();
         const dep_b = new Date(b.departureTime).valueOf();
@@ -440,6 +439,6 @@ export default class Etherisk {
         return 1;
       });
     }
-	  return flights;
+    return flights;
   }
 }
